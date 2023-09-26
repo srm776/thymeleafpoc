@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: thymeleafpoc
+build:
+  artifacts:
+    - image: rsiv5588/thymeleafpoc
+      buildpacks:
+        builder: gcr.io/buildpacks/builder:v1
+manifests:
+  rawYaml:
+    - deployment.yaml
+    - service.yaml
