@@ -5,8 +5,8 @@ metadata:
 build:
   artifacts:
     - image: rsiv5588/thymeleafpoc
-      buildpacks:
-        builder: gcr.io/buildpacks/builder:v1
+      docker:
+        dockerfile: Dockerfile
 manifests:
   rawYaml:
     - deployment.yaml
